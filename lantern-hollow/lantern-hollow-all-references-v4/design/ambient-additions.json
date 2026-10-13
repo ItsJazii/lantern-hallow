@@ -1,0 +1,123 @@
+{
+  "version": 3,
+  "status": "reference/design handoff; runtime integration is Opus work",
+  "new_assets": [
+    {
+      "id": "koi",
+      "priority": 1,
+      "reference": "lively/creatures/koi.png",
+      "model_filename": "koi.glb",
+      "placement": "Pond; swims with Moonfins",
+      "suggested_scale": "0.35\u20130.45 m long"
+    },
+    {
+      "id": "frog",
+      "priority": 1,
+      "reference": "lively/creatures/frog.png",
+      "model_filename": "frog.glb",
+      "placement": "Lily pads and bank",
+      "suggested_scale": "0.18\u20130.25 m tall"
+    },
+    {
+      "id": "rabbit",
+      "priority": 1,
+      "reference": "lively/creatures/rabbit.png",
+      "model_filename": "rabbit.glb",
+      "placement": "Grassy clearings",
+      "suggested_scale": "0.35\u20130.45 m seated; ears included"
+    },
+    {
+      "id": "glow_mushrooms",
+      "priority": 1,
+      "reference": "lively/garden/glow_mushrooms.png",
+      "model_filename": "glow_mushrooms.glb",
+      "placement": "Grove and tree roots",
+      "suggested_scale": "0.30\u20130.45 m cluster height"
+    },
+    {
+      "id": "reeds",
+      "priority": 1,
+      "reference": "lively/garden/reeds.png",
+      "model_filename": "reeds.glb",
+      "placement": "Pond and stream banks",
+      "suggested_scale": "0.8\u20131.2 m tall"
+    },
+    {
+      "id": "potion_bottles",
+      "priority": 1,
+      "reference": "lively/stall/potion_bottles.png",
+      "model_filename": "potion_bottles.glb",
+      "placement": "Keeper shelves",
+      "suggested_scale": "0.15\u20130.30 m bottle heights"
+    },
+    {
+      "id": "herb_jars",
+      "priority": 1,
+      "reference": "lively/stall/herb_jars.png",
+      "model_filename": "herb_jars.glb",
+      "placement": "Keeper shelves",
+      "suggested_scale": "0.18\u20130.28 m container heights"
+    },
+    {
+      "id": "owl",
+      "priority": 2,
+      "reference": "lively/creatures/owl.png",
+      "model_filename": "owl.glb",
+      "placement": "Giant tree perch",
+      "suggested_scale": "0.30\u20130.40 m tall"
+    },
+    {
+      "id": "duck",
+      "priority": 2,
+      "reference": "lively/creatures/duck.png",
+      "model_filename": "duck.glb",
+      "placement": "Pond; reuse for duckling family",
+      "suggested_scale": "0.18\u20130.25 m body length"
+    },
+    {
+      "id": "stone_lantern",
+      "priority": 2,
+      "reference": "lively/garden/stone_lantern.png",
+      "model_filename": "stone_lantern.glb",
+      "placement": "Selected pond shore spots",
+      "suggested_scale": "0.8\u20131.0 m tall"
+    },
+    {
+      "id": "herb_bundle",
+      "priority": 2,
+      "reference": "lively/stall/herb_bundle.png",
+      "model_filename": "herb_bundle.glb",
+      "placement": "Hangs under stall roof",
+      "suggested_scale": "0.35\u20130.45 m long"
+    },
+    {
+      "id": "moth",
+      "priority": 3,
+      "reference": "lively/creatures/moth.png",
+      "model_filename": "moth.glb",
+      "placement": "Lantern surroundings",
+      "suggested_scale": "0.10\u20130.15 m wingspan"
+    },
+    {
+      "id": "barrel_crates",
+      "priority": 3,
+      "reference": "lively/stall/barrel_crates.png",
+      "model_filename": "barrel_crates.glb",
+      "placement": "Beside tea stall",
+      "suggested_scale": "0.8\u20131.0 m assembly height"
+    },
+    {
+      "id": "firefly",
+      "priority": 1,
+      "reference": "lively/creatures/firefly.png",
+      "model_filename": "firefly.glb",
+      "placement": "Close-up visitors around shrubs and lanterns; distant glows stay effects",
+      "suggested_scale": "0.015\u20130.025 m actual length; slightly larger near-camera version if needed"
+    }
+  ],
+  "speaking_npc_count": 4,
+  "quest_chain_changed": false,
+  "koi_is_catchable": false,
+  "firefly_model_for": "near-camera insect visitors",
+  "firefly_distant_effects": "retain engine-made glow effects"
+}

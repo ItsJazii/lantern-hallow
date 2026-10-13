@@ -1,0 +1,132 @@
+{
+  "version": 2,
+  "game": "Lantern Hollow",
+  "engine": "Godot 4 stable; record exact installed version",
+  "renderer": "Forward+",
+  "platform": "Windows desktop",
+  "perspective": "first_person",
+  "npc_count": 4,
+  "fish_species": [
+    "Moonfin"
+  ],
+  "quests": [
+    {
+      "id": "moonleaves",
+      "title": "A Little Help",
+      "leaf_target_count": 3,
+      "requires": [
+        "keeper_met",
+        "moss_met"
+      ]
+    },
+    {
+      "id": "tea",
+      "title": "Tea for a Friend",
+      "requires": [
+        "leaves_returned"
+      ],
+      "reward_coins_once": 3,
+      "unlocks": [
+        "bait_shop"
+      ]
+    },
+    {
+      "id": "moonfin",
+      "title": "A Moonfin Wish",
+      "requires": [
+        "tea_served",
+        "blue_met",
+        "has_rod",
+        "bait_available"
+      ],
+      "guaranteed_first_species": "Moonfin",
+      "completion": "committed_fish_release",
+      "reward_item_once": "wish_lantern"
+    },
+    {
+      "id": "lanterns",
+      "title": "Light the Evening",
+      "requires": [
+        "first_moonfin_released",
+        "wish_lantern_owned"
+      ],
+      "unique_light_targets": 2,
+      "ending_once": true
+    }
+  ],
+  "economy": {
+    "initial_coins": 0,
+    "initial_bait": 0,
+    "tea_reward_once": 3,
+    "bait_unit_cost": 1,
+    "first_purchase_loans_rod": true,
+    "release_reward": 2,
+    "bait_consumed_per_committed_release": 1,
+    "commit_point": "release_animation_completed",
+    "recovery": "keeper gives one bait only when unlocked and coins==0 and bait==0"
+  },
+  "fishing": {
+    "station_count": 1,
+    "wait_seconds": [
+      4,
+      7
+    ],
+    "bite_timeout": null,
+    "states": [
+      "IDLE",
+      "CASTING",
+      "WAITING",
+      "BITE",
+      "REELING",
+      "CATCH_REVEAL",
+      "RELEASING"
+    ],
+    "cancel_allowed": [
+      "CASTING",
+      "WAITING",
+      "BITE",
+      "REELING"
+    ],
+    "cancel_cost": 0,
+    "quit_load_discards_uncommitted_session": true,
+    "input_guard": "one pending catch token per session",
+    "reward_transaction_atomic": true,
+    "repeatable_after_ending": true
+  },
+  "optional": [
+    "bench",
+    "hide_hud",
+    "three_hidden_charms",
+    "fish_size_tint_variation"
+  ],
+  "required_settings": [
+    "music",
+    "sfx",
+    "ambience",
+    "mouse_sensitivity"
+  ],
+  "persistent_keys": [
+    "keeper_met",
+    "moss_met",
+    "collected_leaf_ids",
+    "leaves_returned",
+    "tea_brewed",
+    "tea_served",
+    "coins",
+    "bait",
+    "has_rod",
+    "blue_met",
+    "release_count",
+    "first_moonfin_released",
+    "wish_lantern_owned",
+    "lit_lantern_ids",
+    "ending_complete",
+    "settings"
+  ],
+  "expected_balance_after_tea_buy_release": {
+    "coins": 4,
+    "bait": 0,
+    "has_rod": true,
+    "first_moonfin_released": true
+  }
+}

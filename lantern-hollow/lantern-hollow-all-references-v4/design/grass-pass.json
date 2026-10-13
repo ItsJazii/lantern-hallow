@@ -1,0 +1,48 @@
+{
+  "version": 4,
+  "status": "proposed visual targets, not runtime-tested",
+  "primary_reference": "concepts/colorful-groundcover.png",
+  "models": [
+    {
+      "file": "grass_short.glb",
+      "height_m": [
+        0.08,
+        0.12
+      ],
+      "reference": "grass/grass_short.png",
+      "priority": 1
+    },
+    {
+      "file": "grass_tall.glb",
+      "height_m": [
+        0.25,
+        0.35
+      ],
+      "reference": "grass/grass_tall.png",
+      "priority": 2,
+      "coverage": "sparse root/rock accent"
+    }
+  ],
+  "colors": {
+    "sage": "#86A17A",
+    "moss": "#526C4A",
+    "fresh_lime": "#ACB96B",
+    "muted_gold": "#B6A46D",
+    "cool_sage": "#729B8D",
+    "cream_flower": "#F1DFC0",
+    "blush_flower": "#CC8C98",
+    "lavender_flower": "#A18ABA"
+  },
+  "green_vegetation_fraction_target_min": 0.85,
+  "exclusions": [
+    "full walkable path",
+    "water",
+    "dock",
+    "bridge",
+    "stall floor",
+    "interaction clearance"
+  ],
+  "placement": "irregular clustered patches, terrain-aligned roots, soft density edges",
+  "reuse_flower_reference": "plants/03-pink-flower.png",
+  "runtime_validation_required": true
+}

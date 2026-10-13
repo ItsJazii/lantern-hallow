@@ -1,0 +1,113 @@
+{
+  "status": "suggested blockout; adjust after movement/collision playtests",
+  "footprint_m": [
+    60,
+    50
+  ],
+  "coordinate_system": "Godot meters, X east, Y up, Z south; north is -Z",
+  "pond": {
+    "center_xz": [
+      0,
+      0
+    ],
+    "radius_xz_m": [
+      12.5,
+      9.5
+    ]
+  },
+  "zones": {
+    "tea_stall": [
+      -24,
+      0
+    ],
+    "hero_tree": [
+      -23,
+      -8
+    ],
+    "moonleaf_grove": [
+      16,
+      -13
+    ],
+    "dock": [
+      13,
+      9
+    ],
+    "bench": [
+      0,
+      18
+    ],
+    "spawn": [
+      -30,
+      26
+    ],
+    "bridge": [
+      -20,
+      15.5
+    ]
+  },
+  "notes": [
+    "Scenery trees may extend beyond the nominal blockout.",
+    "Spawn is just outside the southwest garden boundary.",
+    "Orient stall counter toward pond; use one connected loop path plus short spurs.",
+    "Keep light sources sparse; reused lantern meshes need not all cast dynamic shadows.",
+    "Place exactly three gatherable moonleaf targets and exactly two dock-lighting targets."
+  ],
+  "fishing_station": {
+    "dock_xz": [
+      13,
+      9
+    ],
+    "suggested_cast_anchor_xz": [
+      10.5,
+      4
+    ],
+    "keeper_bait_shop_xz": [
+      -24,
+      0
+    ],
+    "requires": [
+      "tea_served",
+      "blue_met",
+      "has_rod",
+      "bait_available"
+    ]
+  },
+  "hidden_charms_optional_stretch": true,
+  "hidden_charms_xz": [
+    [
+      -16,
+      -12
+    ],
+    [
+      25,
+      1
+    ],
+    [
+      6,
+      24
+    ]
+  ],
+  "quest_order": [
+    "meet_keeper",
+    "gather_three_moonleaves",
+    "return_and_brew",
+    "serve_fox",
+    "buy_bait_and_loan_rod",
+    "meet_blue_spirit",
+    "catch_and_release_moonfin",
+    "light_two_dock_lanterns",
+    "release_wish_lanterns"
+  ],
+  "effects_in_engine": [
+    "water",
+    "mist",
+    "steam",
+    "fireflies",
+    "lantern emission",
+    "blue spirit glow",
+    "floating lantern motion",
+    "fishing line",
+    "bobber ripple",
+    "fish release splash"
+  ]
+}

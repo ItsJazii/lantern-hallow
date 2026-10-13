@@ -1,0 +1,595 @@
+[
+  {
+    "file": "characters/01-tea-keeper.png",
+    "kind": "characters",
+    "title": "Tea keeper",
+    "suggested_scale": "1.65 m tall",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "e0d63911c00db2c315546f1ad8e5305690f5448fe228a5f780d09f3a0a0907dd"
+  },
+  {
+    "file": "characters/02-moss-spirit.png",
+    "kind": "characters",
+    "title": "Moss spirit",
+    "suggested_scale": "0.65 m tall",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "4b92aab632e6533fef77ef0ae4fd24b8636f5e49aee12877340bedaf006f5dcd"
+  },
+  {
+    "file": "characters/03-ivory-fox.png",
+    "kind": "characters",
+    "title": "Ivory fox spirit",
+    "suggested_scale": "0.70 m seated",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "2f2bd7754b2deffa4bf3eec95cfc499724cee083583b95d803c2a2d694163d76"
+  },
+  {
+    "file": "characters/04-blue-spirit.png",
+    "kind": "characters",
+    "title": "Blue spirit",
+    "suggested_scale": "0.60 m body height",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "439949f8f79b63b949598d991c7cf85175ebad47c7e856507edb69a0aefc4dcb"
+  },
+  {
+    "file": "environment/01-hero-tree-trunk.png",
+    "kind": "environment",
+    "title": "Giant tree trunk",
+    "suggested_scale": "10 m trunk; canopy can reach 12 m",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "9e8969e28cc296500babf256e1a86aa4b4b570eac33b08d406371933b36c9c23"
+  },
+  {
+    "file": "environment/02-tree-canopy-cluster.png",
+    "kind": "environment",
+    "title": "Reusable canopy cluster",
+    "suggested_scale": "2–3 m; reuse at varied scales",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "89527ea587b3593669ea52edb0ffa706a7e39abb5cce3fca42618535b469d0f2"
+  },
+  {
+    "file": "props/01-tea-stall.png",
+    "kind": "props",
+    "title": "Empty tea stall",
+    "suggested_scale": "4 × 2.5 m footprint; counter 1 m high",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "853cf7b76e53d74aa03d6516a7b20ea01ad74ed68da6058ad8d912faf1edf3d6"
+  },
+  {
+    "file": "props/02-hanging-lantern.png",
+    "kind": "props",
+    "title": "Hanging lantern",
+    "suggested_scale": "0.45 m body height",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "8406af19c281e5da174c71d71ef020e0a0a4894aba6af84ed3e26137ccf6adf9"
+  },
+  {
+    "file": "props/03-wish-lantern.png",
+    "kind": "props",
+    "title": "Wish lantern",
+    "suggested_scale": "0.50 m body height",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "2f242764e6341715747e02275c96d44202a1b2b439ed2c37f2bbc061a5d903f7"
+  },
+  {
+    "file": "props/04-kettle.png",
+    "kind": "props",
+    "title": "Brass kettle",
+    "suggested_scale": "0.30 m tall",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "6ff95ea2c36bf2c530668a66429b52f9a978df7108f678e0022fc23e0fbe1fce"
+  },
+  {
+    "file": "props/05-teacup.png",
+    "kind": "props",
+    "title": "Ceramic teacup",
+    "suggested_scale": "0.10 m tall",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "7f71c55b0396c9eb98ad2fef6b3f1d03ba5d608af335d38a9f056ba6f8e95f9b"
+  },
+  {
+    "file": "environment/03-wooden-bridge.png",
+    "kind": "environment",
+    "title": "Short wooden bridge",
+    "suggested_scale": "4 × 1.8 m; shallow walkable arch",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "ab3685459f9527f0b509e74248b7e44f53d5ea60662f5ef90e3d80ba277dd7ba"
+  },
+  {
+    "file": "environment/04-lantern-dock.png",
+    "kind": "environment",
+    "title": "Lantern dock",
+    "suggested_scale": "4 × 3 m deck",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e5d2dd66bbfe3644800e71f093447970a060c9adc735d28bb3c94c2d98fffca7"
+  },
+  {
+    "file": "props/06-garden-bench.png",
+    "kind": "props",
+    "title": "Garden bench",
+    "suggested_scale": "1.6 m wide; seat 0.45 m high",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "a22a614ced1a5df5868e8600420b2fa25b8009a91bddc6142f154e08783b8776"
+  },
+  {
+    "file": "environment/05-moss-rock.png",
+    "kind": "environment",
+    "title": "Mossy rock",
+    "suggested_scale": "0.6–1.2 m; reuse",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "27103088354fe2ee08ea4c18f33c9ab84d22a3bf138e3c44c8db5f9101f374ca"
+  },
+  {
+    "file": "environment/06-stepping-stone.png",
+    "kind": "environment",
+    "title": "Stepping stone",
+    "suggested_scale": "0.7 m wide; 0.10 m thick",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "6c1d4ae3d55585aece08462adba82f5bd3c033836de91f8a418246736bef640c"
+  },
+  {
+    "file": "plants/01-moonleaf-plant.png",
+    "kind": "plants",
+    "title": "Moonleaf quest plant",
+    "suggested_scale": "0.55 m tall; 3 quest instances",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "93c5f34d9a4af839478975fc5bf45eb2889ad47e84ef8b8e63bd99315f2000c7"
+  },
+  {
+    "file": "plants/02-fern.png",
+    "kind": "plants",
+    "title": "Fern",
+    "suggested_scale": "0.45 m tall",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "3aed651f05883aadb701382e88a4bb037cb205489bb685f5ed4cacd746b51ef5"
+  },
+  {
+    "file": "plants/03-pink-flower.png",
+    "kind": "plants",
+    "title": "Pink flower",
+    "suggested_scale": "0.25 m tall; recolor for variants",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e2df312c2e3bd8db72cd4053e89a8405f36b5632bca4e69bf4cdcd07c2739d3a"
+  },
+  {
+    "file": "plants/04-water-lily.png",
+    "kind": "plants",
+    "title": "Water lily",
+    "suggested_scale": "0.40 m pad diameter",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "914f453b613707976e75c2e6f40d6d23c24a2a372160e0bd2fd89a22a9fe8337"
+  },
+  {
+    "file": "props/07-spirit-charm.png",
+    "kind": "props",
+    "title": "Hidden spirit charm",
+    "suggested_scale": "0.12 m tall; 3 collectibles",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "df6faca673b2d2bfba0ff7693a6678f1dbb78c02d4a4843525469dd557b523e5"
+  },
+  {
+    "file": "props/08-lantern-post.png",
+    "kind": "props",
+    "title": "Lantern post",
+    "suggested_scale": "2.2 m tall",
+    "width": 1374,
+    "height": 1145,
+    "sha256": "c533495d9f517f7cf7d194ae9399a9a2754ca7b33f5e94f1870f09c50f21ec6b"
+  },
+  {
+    "file": "concepts/04-aerial-garden.png",
+    "kind": "concepts",
+    "title": "Aerial garden concept",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "b216175f927a33d7dc0032e3412348b79c4caf9bd8c2bb10678ecef536f1d380"
+  },
+  {
+    "file": "concepts/original-tea-house.png",
+    "kind": "concepts",
+    "title": "Original tea-house concept",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "8b9528153fbfb128ec44f42f1602c72cce682993b2d2ebba3a9c5bd0e863168f"
+  },
+  {
+    "file": "concepts/original-counter-view.png",
+    "kind": "concepts",
+    "title": "Original counter concept",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "1a885a581b095d176e615c23c24f661181e495fb0f178ac202f0eda808b740c3"
+  },
+  {
+    "file": "concepts/original-character-lineup.png",
+    "kind": "concepts",
+    "title": "Original character lineup",
+    "suggested_scale": "visual concept",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "5439e60a2f978a91b5ebf9b768f7f7466809063849336d0b2a6f0ab4e2454343"
+  },
+  {
+    "file": "concepts/expanded-garden.png",
+    "kind": "concepts",
+    "title": "Expanded garden concept",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "a8a319514ac66dbd8bfcf8f99d23cfadb6d1fd3654121c2895f28c93f92b9b55"
+  },
+  {
+    "file": "concepts/moonleaf-quest.png",
+    "kind": "concepts",
+    "title": "Moonleaf quest concept",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "efeb2621b4e94c119c7964fa5a66f6541c084de4c44b0f2e833b76adde23b2e7"
+  },
+  {
+    "file": "concepts/lantern-ending.png",
+    "kind": "concepts",
+    "title": "Lantern ending concept",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "089bb3e615f95ce81bd962f5115db2739e6e19cc5898cc12ea62cf1e4ca6c349"
+  },
+  {
+    "file": "fishing/01-fishing-rod.png",
+    "kind": "fishing",
+    "title": "Fishing rod",
+    "suggested_scale": "1.7 m long; engine line and guides may be rebuilt",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "eb6a7db0280a147953a081581872ab101ebcbbedba5ed51b4201711602301665"
+  },
+  {
+    "file": "fishing/02-bobber.png",
+    "kind": "fishing",
+    "title": "Coral and ivory bobber",
+    "suggested_scale": "0.08 m body height; enlarge slightly for readability",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7d8f19a099443082795a0c70f0f17938aca85c6ce583d49864ab225ad0ba3577"
+  },
+  {
+    "file": "fishing/03-moonfin.png",
+    "kind": "fishing",
+    "title": "Moonfin fish",
+    "suggested_scale": "0.25–0.35 m long",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e52dd19683c952f77966af90de89d864ba77170bc7243a67a645c8f463e39b20"
+  },
+  {
+    "file": "fishing/04-bait-jar.png",
+    "kind": "fishing",
+    "title": "Bait jar",
+    "suggested_scale": "0.22 m tall",
+    "width": 1312,
+    "height": 1199,
+    "sha256": "36580e95c34acd5ca2dd722325e430a638bf4e5ff7baa7f98aa5021def7ecb9a"
+  },
+  {
+    "file": "fishing/05-garden-coin.png",
+    "kind": "fishing",
+    "title": "Garden coin",
+    "suggested_scale": "0.035 m diameter",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "bf394fccbfe3ab563e0cd2538de8abac45cc6988b3c64b30ce5ca4f92dc06645"
+  },
+  {
+    "file": "fishing/06-bait-pellet.png",
+    "kind": "fishing",
+    "title": "Seed-dough bait pellet",
+    "suggested_scale": "0.012 m; decorative ingredient only",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "5ff8a97214b35e344064044831565118b52f7a5b8a6339425f64e6145f7199ad"
+  },
+  {
+    "file": "concepts/fishing-first-person.png",
+    "kind": "concepts",
+    "title": "First-person pond fishing",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "6698275ceaec6a6f0bcf72812c21f23c76d7a0d1584594db9d035b0fcacc70fd"
+  },
+  {
+    "file": "concepts/fishing-moonfin-release.png",
+    "kind": "concepts",
+    "title": "Moonfin release celebration",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "a390a6173d74975c95b8de812547d14d40c67ae49f95280e5d9480f65a2420cb"
+  },
+  {
+    "file": "concepts/fishing-bait-shop.png",
+    "kind": "concepts",
+    "title": "Keeper bait shop",
+    "suggested_scale": "visual concept",
+    "width": 1672,
+    "height": 941,
+    "sha256": "9e4775d251a1ae49343935917e9982d7f0fb119922c4fe16b753dc7700ed10dd"
+  },
+  {
+    "file": "lively/creatures/koi.png",
+    "kind": "lively_creatures",
+    "title": "Coral koi",
+    "suggested_scale": "0.35–0.45 m long",
+    "model_filename": "koi.glb",
+    "priority": 1,
+    "placement": "Pond; swims with Moonfins",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "2b5bd3423423bbd5288a1081d98dea492b9a48acd7fd16e0af6c4a9568071dbf"
+  },
+  {
+    "file": "lively/creatures/frog.png",
+    "kind": "lively_creatures",
+    "title": "Lily-hat frog",
+    "suggested_scale": "0.18–0.25 m tall",
+    "model_filename": "frog.glb",
+    "priority": 1,
+    "placement": "Lily pads and bank",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "0709ee0bb672b9d2c3f0b4e01b30fbe6b32c641f88f168946c69c9cd821b27b4"
+  },
+  {
+    "file": "lively/creatures/rabbit.png",
+    "kind": "lively_creatures",
+    "title": "Moon rabbit",
+    "suggested_scale": "0.35–0.45 m seated; ears included",
+    "model_filename": "rabbit.glb",
+    "priority": 1,
+    "placement": "Grassy clearings",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "8a8c76e4e985367352ac6e6e58657a318c21172fa791349334f9ea336554f0bd"
+  },
+  {
+    "file": "lively/garden/glow_mushrooms.png",
+    "kind": "lively_garden",
+    "title": "Glowing mushroom cluster",
+    "suggested_scale": "0.30–0.45 m cluster height",
+    "model_filename": "glow_mushrooms.glb",
+    "priority": 1,
+    "placement": "Grove and tree roots",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "7f70ba158eadaa5cf61761b380f23c8e8415ed0b145cdaec2c8e88597718b202"
+  },
+  {
+    "file": "lively/garden/reeds.png",
+    "kind": "lively_garden",
+    "title": "Pond reeds",
+    "suggested_scale": "0.8–1.2 m tall",
+    "model_filename": "reeds.glb",
+    "priority": 1,
+    "placement": "Pond and stream banks",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "ca803371b7cda2df92db5493e1a9c11e6371e20e302e8986bc90ea9546c5b04c"
+  },
+  {
+    "file": "lively/stall/potion_bottles.png",
+    "kind": "lively_stall",
+    "title": "Four potion bottles",
+    "suggested_scale": "0.15–0.30 m bottle heights",
+    "model_filename": "potion_bottles.glb",
+    "priority": 1,
+    "placement": "Keeper shelves",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "b50787da871951550e726d6d2abef9a74c5a624f147975f066d225d8e25209b5"
+  },
+  {
+    "file": "lively/stall/herb_jars.png",
+    "kind": "lively_stall",
+    "title": "Tea herb jars",
+    "suggested_scale": "0.18–0.28 m container heights",
+    "model_filename": "herb_jars.glb",
+    "priority": 1,
+    "placement": "Keeper shelves",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "3511ebcada84d7f45736b6d1ec6e7382f1e6483668e06cf64a39e7e026a83f85"
+  },
+  {
+    "file": "lively/creatures/owl.png",
+    "kind": "lively_creatures",
+    "title": "Lantern owl",
+    "suggested_scale": "0.30–0.40 m tall",
+    "model_filename": "owl.glb",
+    "priority": 2,
+    "placement": "Giant tree perch",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "b0fbd630a7e46fbaceb3957153dcb88082230747b1feee1f67004ef4d452b786"
+  },
+  {
+    "file": "lively/creatures/duck.png",
+    "kind": "lively_creatures",
+    "title": "Duckling",
+    "suggested_scale": "0.18–0.25 m body length",
+    "model_filename": "duck.glb",
+    "priority": 2,
+    "placement": "Pond; reuse for duckling family",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "133e71fa7df94c3dae5462d1534c0db45f90f3499707a3c6b1e9d35649ba806d"
+  },
+  {
+    "file": "lively/garden/stone_lantern.png",
+    "kind": "lively_garden",
+    "title": "Stone garden lantern",
+    "suggested_scale": "0.8–1.0 m tall",
+    "model_filename": "stone_lantern.glb",
+    "priority": 2,
+    "placement": "Selected pond shore spots",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "4a8aaf3b9074e489340aac92fab8ae23626c6e25c5394c5f93c752966485baaf"
+  },
+  {
+    "file": "lively/stall/herb_bundle.png",
+    "kind": "lively_stall",
+    "title": "Hanging herb bundle",
+    "suggested_scale": "0.35–0.45 m long",
+    "model_filename": "herb_bundle.glb",
+    "priority": 2,
+    "placement": "Hangs under stall roof",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "2874cf2b59f6b687ccea876293e3172630e659df540a0f79832e27a3458325af"
+  },
+  {
+    "file": "lively/creatures/moth.png",
+    "kind": "lively_creatures",
+    "title": "Moon moth",
+    "suggested_scale": "0.10–0.15 m wingspan",
+    "model_filename": "moth.glb",
+    "priority": 3,
+    "placement": "Lantern surroundings",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "e8a45bc73efa28e0a26153b97df6106c4445e5789da17c2d8dc6cc93d4a860de"
+  },
+  {
+    "file": "lively/stall/barrel_crates.png",
+    "kind": "lively_stall",
+    "title": "Barrel and tea crates",
+    "suggested_scale": "0.8–1.0 m assembly height",
+    "model_filename": "barrel_crates.glb",
+    "priority": 3,
+    "placement": "Beside tea stall",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "0ed337f9957e138141a655a12153250df3bacc5faefe02564d6b8a28ba013957"
+  },
+  {
+    "file": "lively/creatures/firefly.png",
+    "kind": "lively_creatures",
+    "title": "Amber firefly",
+    "suggested_scale": "0.015–0.025 m actual length; slightly larger near-camera version if needed",
+    "model_filename": "firefly.glb",
+    "priority": 1,
+    "placement": "Close-up visitors around shrubs and lanterns; distant glows stay effects",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "a4b3b76837d0f6788c348a0f097bf123f650d819589efea8ca2e06516d42e286"
+  },
+  {
+    "file": "supplemental/rounded-garden-tree.png",
+    "kind": "supplemental",
+    "title": "Rounded garden tree",
+    "suggested_scale": "5–6 m tall",
+    "width": 1145,
+    "height": 1373,
+    "sha256": "7720bc712c87340ce064a4bb1b9cde6605c8f9aab4766dd52bf7cd8b094bd212"
+  },
+  {
+    "file": "supplemental/tall-woodland-tree.png",
+    "kind": "supplemental",
+    "title": "Tall woodland tree",
+    "suggested_scale": "7–9 m tall",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "dfa5a3310ea9004374a947f6c7462917b9a74cb7a2ec9095f1eaa910e6c2483b"
+  },
+  {
+    "file": "supplemental/keeper-front-full-body.png",
+    "kind": "supplemental",
+    "title": "Keeper — front-facing full body",
+    "suggested_scale": "1.65 m tall; preferred keeper Tripo input",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "7f7a221349c7ddd45829c992788cf5589101f0b1ddbba652e9e39721f6e35b00"
+  },
+  {
+    "file": "supplemental/keeper-front-face.png",
+    "kind": "supplemental",
+    "title": "Keeper — front-facing face detail",
+    "suggested_scale": "Supplementary face reference; use full body to generate whole model",
+    "width": 1024,
+    "height": 1536,
+    "sha256": "70291ce29bd74b50c40337d7efd0085db061077935faf87c4ff53bcaa6d38c9c"
+  },
+  {
+    "file": "grass/grass_short.png",
+    "kind": "grass",
+    "title": "Soft short meadow grass",
+    "suggested_scale": "0.08–0.12 m tall",
+    "model_filename": "grass_short.glb",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "f83a911616f01f8e44219ec015a38b5806f5ed6124fd1eee2c5d7c3dfcb90e47"
+  },
+  {
+    "file": "grass/grass_tall.png",
+    "kind": "grass",
+    "title": "Tall root-side grass — optional, sparse",
+    "suggested_scale": "0.25–0.35 m tall; keep sparse",
+    "model_filename": "grass_tall.glb",
+    "width": 1199,
+    "height": 1312,
+    "sha256": "7ae77ed986d33545ef8a2229b7badbb7715e78540d5ec88e801ae6643b210ab5"
+  },
+  {
+    "file": "concepts/colorful-groundcover.png",
+    "kind": "concepts",
+    "title": "Colorful groundcover placement — current direction",
+    "suggested_scale": "Art-direction concept, not an implemented game screenshot",
+    "width": 1421,
+    "height": 1107,
+    "sha256": "950e38cd5f5b5b97b3526b0eefe4ba624cd317380638f02b13b3b399f823bb02"
+  },
+  {
+    "file": "ui/cozy-ui-concept.png",
+    "kind": "ui",
+    "title": "Cozy HUD, keeper shop and fishing prompt",
+    "suggested_scale": "UI mockup; component examples below the gameplay view",
+    "width": 1586,
+    "height": 992,
+    "sha256": "bfe0d91cb877a1959c88e7eeeb6a026aa3ac8cd2774d01c8f37d5a96ad286f7b"
+  },
+  {
+    "file": "ui/adventurer-journal-ui.png",
+    "kind": "ui",
+    "title": "Adventurer journal UI — preferred final direction",
+    "suggested_scale": "Authoritative UI concept; examples below gameplay are separate states",
+    "width": 1672,
+    "height": 941,
+    "sha256": "7664e24c495cd46a1b1ac7209227f81fb292b9661bce3ed812f92646056a8ff1"
+  }
+]

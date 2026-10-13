@@ -1,0 +1,202 @@
+[gd_scene load_steps=31 format=3]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" path="res://scripts/world/world.gd" id="2_world"]
+[ext_resource type="Script" path="res://scripts/world/prop.gd" id="3_prop"]
+[ext_resource type="Script" path="res://scripts/npcs/keeper.gd" id="4_keeper"]
+[ext_resource type="Script" path="res://scripts/npcs/fox.gd" id="5_fox"]
+[ext_resource type="Script" path="res://scripts/npcs/moss_spirit.gd" id="6_moss"]
+[ext_resource type="Script" path="res://scripts/npcs/blue_spirit.gd" id="7_blue"]
+[ext_resource type="Script" path="res://scripts/interactables/kettle.gd" id="8_kettle"]
+[ext_resource type="Script" path="res://scripts/interactables/teacup.gd" id="9_cup"]
+[ext_resource type="Script" path="res://scripts/interactables/moonleaf.gd" id="10_leaf"]
+[ext_resource type="Script" path="res://scripts/interactables/dock_lantern.gd" id="11_lantern"]
+[ext_resource type="Script" path="res://scripts/interactables/fishing_spot.gd" id="12_spot"]
+[ext_resource type="Script" path="res://scripts/interactables/bench.gd" id="13_bench"]
+[ext_resource type="Script" path="res://scripts/interactables/charm.gd" id="14_charm"]
+[ext_resource type="Script" path="res://scripts/fishing/fishing_controller.gd" id="15_fishing"]
+[ext_resource type="Script" path="res://scripts/world/celebration.gd" id="16_celebration"]
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="17_player"]
+[ext_resource type="PackedScene" path="res://assets/models/keeper.glb" id="18_keeper_model"]
+[ext_resource type="PackedScene" path="res://assets/models/giant_tree.glb" id="19_tree_model"]
+[ext_resource type="PackedScene" path="res://assets/models/tea_stall.glb" id="20_stall_model"]
+[ext_resource type="PackedScene" path="res://assets/models/bridge.glb" id="21_bridge_model"]
+[ext_resource type="PackedScene" path="res://assets/models/fox.glb" id="22_fox_model"]
+[ext_resource type="PackedScene" path="res://assets/models/moss_spirit.glb" id="23_moss_model"]
+[ext_resource type="PackedScene" path="res://assets/models/blue_spirit.glb" id="24_blue_model"]
+[ext_resource type="PackedScene" path="res://assets/models/kettle.glb" id="25_kettle_model"]
+[ext_resource type="PackedScene" path="res://assets/models/teacup.glb" id="26_cup_model"]
+[ext_resource type="PackedScene" path="res://assets/models/moonleaf.glb" id="27_leaf_model"]
+[ext_resource type="PackedScene" path="res://assets/models/bench.glb" id="28_bench_model"]
+[ext_resource type="PackedScene" path="res://assets/models/charm.glb" id="29_charm_model"]
+[ext_resource type="PackedScene" path="res://assets/models/dock.glb" id="30_dock_model"]
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="World" type="Node3D" parent="."]
+script = ExtResource("2_world")
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="GiantTree" type="Node3D" parent="Props"]
+position = Vector3(-31, 0, -6)
+script = ExtResource("3_prop")
+kind = "giant_tree"
+model = ExtResource("19_tree_model")
+model_scale = 0.846
+
+[node name="TeaStall" type="Node3D" parent="Props"]
+position = Vector3(-23.6, 0, 0)
+script = ExtResource("3_prop")
+kind = "tea_stall"
+model = ExtResource("20_stall_model")
+model_yaw = 90.0
+model_offset = Vector3(0, -0.03, 0)
+
+[node name="Keeper" type="Node3D" parent="Props/TeaStall"]
+position = Vector3(0.05, 0.0, 0.1)
+rotation = Vector3(0, 1.5708, 0)
+script = ExtResource("4_keeper")
+model = ExtResource("18_keeper_model")
+speaker = "Keeper"
+interact_size = Vector3(0.9, 1.1, 0.9)
+interact_offset = Vector3(0, 1.2, 0)
+
+[node name="Kettle" type="Node3D" parent="Props/TeaStall"]
+position = Vector3(1.0, 1.12, -1.3)
+rotation = Vector3(0, 1.5708, 0)
+script = ExtResource("8_kettle")
+model = ExtResource("25_kettle_model")
+
+[node name="Teacup" type="Node3D" parent="Props/TeaStall"]
+position = Vector3(1.05, 1.12, -0.6)
+script = ExtResource("9_cup")
+model = ExtResource("26_cup_model")
+
+[node name="Fox" type="Node3D" parent="Props/TeaStall"]
+position = Vector3(2.25, 0, 2.35)
+rotation = Vector3(0, 2.0944, 0)
+script = ExtResource("5_fox")
+model = ExtResource("22_fox_model")
+speaker = "Fox"
+breathe = 0.015
+solid_radius = 0.3
+solid_height = 0.9
+interact_size = Vector3(0.9, 1.0, 0.9)
+interact_offset = Vector3(0, 0.4, 0)
+
+[node name="Bridge" type="Node3D" parent="Props"]
+position = Vector3(-14.9, 0, 10.5)
+rotation = Vector3(0, 2.39, 0)
+script = ExtResource("3_prop")
+kind = "bridge"
+model = ExtResource("21_bridge_model")
+model_offset = Vector3(0, -0.26, 0)
+
+[node name="Dock" type="Node3D" parent="Props"]
+position = Vector3(8.21, 0, 5.69)
+rotation = Vector3(0, 0.965, 0)
+script = ExtResource("3_prop")
+kind = "dock"
+model = ExtResource("30_dock_model")
+model_offset = Vector3(0, -0.695, 0)
+
+[node name="DockLanternWest" type="Node3D" parent="Props/Dock"]
+position = Vector3(-1.32, 0.155, -2.55)
+script = ExtResource("11_lantern")
+arm_yaw = 180.0
+target_id = "dock_lantern_west"
+
+[node name="DockLanternEast" type="Node3D" parent="Props/Dock"]
+position = Vector3(1.32, 0.155, -2.55)
+script = ExtResource("11_lantern")
+target_id = "dock_lantern_east"
+
+[node name="FishingSpot" type="Node3D" parent="Props/Dock"]
+position = Vector3(0, 0.15, -2.1)
+script = ExtResource("12_spot")
+
+[node name="BlueSpirit" type="Node3D" parent="Props/Dock"]
+position = Vector3(-0.8, 0.5, -0.7)
+rotation = Vector3(0, 1.5708, 0)
+script = ExtResource("7_blue")
+model = ExtResource("24_blue_model")
+speaker = "Blue Spirit"
+bob_height = 0.06
+bob_speed = 1.4
+interact_size = Vector3(1.0, 1.1, 1.0)
+interact_offset = Vector3(0, 0.4, 0)
+
+[node name="Grove" type="Node3D" parent="."]
+
+[node name="MossSpirit" type="Node3D" parent="Grove"]
+position = Vector3(17.0, 0, -14.3)
+rotation = Vector3(0, -0.6435, 0)
+script = ExtResource("6_moss")
+model = ExtResource("23_moss_model")
+speaker = "Moss Spirit"
+bob_height = 0.02
+bob_speed = 2.2
+solid_radius = 0.32
+solid_height = 0.8
+interact_size = Vector3(0.9, 1.0, 0.9)
+interact_offset = Vector3(0, 0.4, 0)
+
+[node name="MoonleafA" type="Node3D" parent="Grove"]
+position = Vector3(13.5, 0, -14.7)
+script = ExtResource("10_leaf")
+model = ExtResource("27_leaf_model")
+target_id = "moonleaf_a"
+
+[node name="MoonleafB" type="Node3D" parent="Grove"]
+position = Vector3(18.7, 0, -12.1)
+script = ExtResource("10_leaf")
+model = ExtResource("27_leaf_model")
+target_id = "moonleaf_b"
+
+[node name="MoonleafC" type="Node3D" parent="Grove"]
+position = Vector3(16.3, 0, -16.0)
+script = ExtResource("10_leaf")
+model = ExtResource("27_leaf_model")
+target_id = "moonleaf_c"
+
+[node name="Bench" type="Node3D" parent="."]
+position = Vector3(0, 0, 17.7)
+script = ExtResource("13_bench")
+model = ExtResource("28_bench_model")
+model_yaw = 180.0
+model_offset = Vector3(0, -0.03, 0)
+
+[node name="Charms" type="Node3D" parent="."]
+
+[node name="CharmA" type="Node3D" parent="Charms"]
+position = Vector3(-17.5, 0, -14.0)
+script = ExtResource("14_charm")
+model = ExtResource("29_charm_model")
+model_scale = 1.4
+target_id = "charm_a"
+
+[node name="CharmB" type="Node3D" parent="Charms"]
+position = Vector3(26.0, 0, 2.0)
+script = ExtResource("14_charm")
+model = ExtResource("29_charm_model")
+model_scale = 1.4
+target_id = "charm_b"
+
+[node name="CharmC" type="Node3D" parent="Charms"]
+position = Vector3(7.0, 0, 23.5)
+script = ExtResource("14_charm")
+model = ExtResource("29_charm_model")
+model_scale = 1.4
+target_id = "charm_c"
+
+[node name="Fishing" type="Node3D" parent="."]
+script = ExtResource("15_fishing")
+cast_anchor = Vector3(2.0, -0.3, 1.2)
+
+[node name="Celebration" type="Node3D" parent="."]
+script = ExtResource("16_celebration")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("17_player")

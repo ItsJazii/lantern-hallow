@@ -1,0 +1,55 @@
+{
+  "version": 4,
+  "style": "cozy adventurer field journal",
+  "primary_concept": "ui/adventurer-journal-ui.png",
+  "alternative_concept": "ui/cozy-ui-concept.png",
+  "palette": {
+    "parchment": "#F4E6C8",
+    "ink": "#203C35",
+    "moss": "#465B3A",
+    "button_text": "#FFF7E6",
+    "brass": "#AA7A35",
+    "muted_ink": "#5C6856"
+  },
+  "reference_viewport": [
+    1920,
+    1080
+  ],
+  "starting_dimensions_px": {
+    "screen_margin": 32,
+    "padding": [
+      20,
+      24
+    ],
+    "body_text": 22,
+    "heading": [
+      26,
+      28
+    ],
+    "action_height": [
+      48,
+      56
+    ],
+    "corner_radius": [
+      10,
+      16
+    ],
+    "border_width": [
+      1,
+      2
+    ]
+  },
+  "states": [
+    "exploration",
+    "interaction",
+    "keeper_shop",
+    "fishing_wait",
+    "fishing_bite",
+    "fish_reveal_release",
+    "quest_complete",
+    "pause_settings"
+  ],
+  "no_new_gameplay_systems": true,
+  "implementation": "shared native Godot theme and controls; actual text, not baked screenshot",
+  "runtime_validation_required": true
+}
