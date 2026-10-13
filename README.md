@@ -6,10 +6,11 @@ A small, cozy first-person night-garden game made with **Godot 4.7.2**. Every ch
 
 ## Just want to play?
 
-Grab a ready-made build from the [**Releases page**](https://github.com/ItsJazii/lantern-hallow/releases/latest):
+**⬇️ [Download for Windows (full quality)](https://github.com/ItsJazii/lantern-hallow/releases/latest/download/LanternHollow-windows.exe)**: one file, no install. Double-click to play. Windows SmartScreen may warn because the file isn't signed: click *More info → Run anyway*. Best on a PC or laptop with a dedicated graphics card.
 
-- **Windows:** download `LanternHollow-windows.exe` and run it. It's a single file; Windows SmartScreen may warn because it isn't signed (*More info → Run anyway*).
-- **Browser:** download `LanternHollow-web.zip`, unzip it, and serve the folder (see [Build it yourself](#build-it-yourself) for the one-line server command).
+**🌐 [Play in your browser](https://lantern-hallow.vercel.app)**: no download, but lighter graphics and a ~250 MB first load. On laptops with two graphics chips, set Chrome to the dedicated one (*Settings → System → Display → Graphics*) for full speed.
+
+All downloads, including the browser build as a zip, are on the [Releases page](https://github.com/ItsJazii/lantern-hallow/releases/latest).
 
 ## Play it locally (fork → Godot)
 
