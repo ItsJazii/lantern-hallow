@@ -15,6 +15,11 @@ const FADE_START := 30.0
 const FADE_END := 44.0
 const TUFT_DETAIL := 14.0   # full-detail "grass new" clumps out to here
 const TUFT_END := 34.0      # lighter clumps fade out by here
+## Browser build only (weak laptop GPUs draw far fewer triangles): lighter clumps
+## everywhere and shorter grass reach. The desktop game never uses these.
+const WEB_TUFT_END := 20.0
+const WEB_FADE_START := 18.0
+const WEB_FADE_END := 28.0
 
 ## Stone lanterns on the pond bank (angle around the pond, radius factor).
 const STONE_LANTERNS := [[2.2, 1.16], [3.75, 1.14], [5.3, 1.15], [1.15, 1.17]]
@@ -191,21 +196,23 @@ func _add_grass_tile(key: String, mm: MultiMesh) -> void:
 	mmi.layers = WaterReflection.LAYER_SMALL
 	mmi.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
 	add_child(mmi)
-	if kind.begins_with("grass_tuft") and ModelLib.has(kind + "_lite"):
+	var web := ModelLib.web_lite()
+	if web and kind.begins_with("grass_tuft") and ModelLib.has(kind + "_lite"):
+		mmi.multimesh = _lite_copy(mm, kind)
+		mmi.visibility_range_end = WEB_TUFT_END
+		mmi.visibility_range_end_margin = 5.0
+	elif web:
+		mmi.visibility_range_end = WEB_FADE_END
+		mmi.visibility_range_end_margin = WEB_FADE_END - WEB_FADE_START
+	elif kind.begins_with("grass_tuft") and ModelLib.has(kind + "_lite"):
 		# The small "grass new" clumps: full detail close by, a lighter copy
 		# (same look at a few pixels' size) further out, gone where they'd be
 		# specks. This is most of the lawn's triangles, so it matters a lot
 		# for frame rate, especially in a browser.
 		mmi.visibility_range_end = TUFT_DETAIL
 		mmi.visibility_range_end_margin = 2.0
-		var lite := MultiMesh.new()
-		lite.transform_format = MultiMesh.TRANSFORM_3D
-		lite.mesh = ModelLib.mesh(kind + "_lite")
-		lite.instance_count = mm.instance_count
-		for i in mm.instance_count:
-			lite.set_instance_transform(i, mm.get_instance_transform(i))
 		var far := MultiMeshInstance3D.new()
-		far.multimesh = lite
+		far.multimesh = _lite_copy(mm, kind)
 		far.material_override = _grass_material(kind)
 		far.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		far.layers = WaterReflection.LAYER_SMALL
@@ -218,6 +225,17 @@ func _add_grass_tile(key: String, mm: MultiMesh) -> void:
 	else:
 		mmi.visibility_range_end = FADE_END
 		mmi.visibility_range_end_margin = FADE_END - FADE_START
+
+
+## Same placements as `mm`, drawn with the lighter copy of the clump.
+func _lite_copy(mm: MultiMesh, kind: String) -> MultiMesh:
+	var lite := MultiMesh.new()
+	lite.transform_format = MultiMesh.TRANSFORM_3D
+	lite.mesh = ModelLib.mesh(kind + "_lite")
+	lite.instance_count = mm.instance_count
+	for i in mm.instance_count:
+		lite.set_instance_transform(i, mm.get_instance_transform(i))
+	return lite
 
 
 var _grass_mats := {}

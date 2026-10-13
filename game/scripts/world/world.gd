@@ -569,6 +569,14 @@ func _multimesh_tiled(mesh: Mesh, transforms: Array, material: Material, shadows
 	return out
 
 
+## Browser build only: small ground cover fades out past ~30 m.
+func _web_reach(mmi: MultiMeshInstance3D) -> void:
+	if ModelLib.web_lite():
+		mmi.visibility_range_end = 32.0
+		mmi.visibility_range_end_margin = 8.0
+		mmi.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
+
+
 func _vc_material(roughness := 0.9, emission := 0.0) -> StandardMaterial3D:
 	var m := StandardMaterial3D.new()
 	m.vertex_color_use_as_albedo = true
@@ -669,7 +677,13 @@ func _build_forest() -> void:
 			if not (model_trees[i] as Array).is_empty():
 				var h := 9.0 if i < 2 else 8.0
 				var mat := ModelLib.wind_material(tree_meshes[i / 2], h, 0.012, 0.004)
-				for trees in _multimesh_tiled(tree_meshes[i / 2], model_trees[i], mat, i % 2 == 0, 14.0):
+				var draw_mesh: Mesh = tree_meshes[i / 2]
+				# Browser build: the outer forest ring uses a lighter copy of the
+				# same tree (same textures); trees near the paths stay full detail.
+				var web_name := ("forest_tree_a" if i < 2 else "forest_tree_b") + "_web"
+				if i % 2 == 1 and ModelLib.web_lite() and ModelLib.has(web_name):
+					draw_mesh = ModelLib.mesh(web_name)
+				for trees in _multimesh_tiled(draw_mesh, model_trees[i], mat, i % 2 == 0, 14.0):
 					if i % 2 == 1:
 						trees.layers = WaterReflection.LAYER_SMALL  # far trees aren't mirrored
 		return
@@ -742,10 +756,12 @@ func _build_ground_cover() -> void:
 	if flower:
 		for mmi in _multimesh_tiled(flower, m_flowers, ModelLib.wind_material(flower, 0.28, 0.07, 0.02), false, 10.0):
 			mmi.layers = WaterReflection.LAYER_SMALL
+			_web_reach(mmi)
 		flowers.clear()
 	if fern:
 		for mmi in _multimesh_tiled(fern, m_ferns, ModelLib.wind_material(fern, 0.5, 0.05, 0.03), false, 10.0):
 			mmi.layers = WaterReflection.LAYER_SMALL
+			_web_reach(mmi)
 		ferns.clear()
 	if bushes.is_empty() and flowers.is_empty() and ferns.is_empty():
 		return

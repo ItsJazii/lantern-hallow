@@ -56,6 +56,41 @@ func _run() -> void:
 	keys.sort_custom(func(a, b): return by[a][1] > by[b][1])
 	for k in keys:
 		print("PERF mm %-28s inst %6d  tris/inst %5d  total %8d  range %4.0f" % [k, by[k][0], by[k][2], by[k][1], by[k][3]])
+	# Ground tiles vs the browser renderer's per-object light limit.
+	var omnis: Array[OmniLight3D] = []
+	for l in scene.find_children("*", "OmniLight3D", true, false):
+		if (l as Light3D).is_visible_in_tree():
+			omnis.append(l)
+	var limit: int = ProjectSettings.get_setting("rendering/limits/opengl/max_lights_per_object")
+	for m in scene.find_children("*", "MeshInstance3D", true, false):
+		var mi := m as MeshInstance3D
+		if mi.mesh == null or mi.mesh.resource_path != "" or mi.get_aabb().size.x < 6.0 or mi.get_aabb().size.y > 15.0 or str(mi.get_parent().name) != "Terrain":
+			continue
+		var box := mi.global_transform * mi.get_aabb()
+		var n := 0
+		for l in omnis:
+			var p := l.global_position
+			var c := Vector3(clampf(p.x, box.position.x, box.end.x), clampf(p.y, box.position.y, box.end.y), clampf(p.z, box.position.z, box.end.z))
+			if c.distance_to(p) < l.omni_range:
+				n += 1
+		if n >= 8:
+			print("PERF tile %s..%s lights %d (limit %d)" % [Vector2(box.position.x, box.position.z).round(), Vector2(box.end.x, box.end.z).round(), n, limit])
+	var singles := {}
+	for m in scene.find_children("*", "MeshInstance3D", true, false):
+		var mi := m as MeshInstance3D
+		if mi.mesh == null or not mi.is_visible_in_tree():
+			continue
+		var key := mi.mesh.resource_path.get_file().get_slice("::", 0)
+		if key == "":
+			key = str(mi.get_parent().name) + "/" + str(mi.name)
+		var cur: Array = singles.get(key, [0, 0])
+		cur[0] += 1
+		cur[1] += mi.mesh.get_faces().size() / 3
+		singles[key] = cur
+	var skeys := singles.keys()
+	skeys.sort_custom(func(a, b): return singles[a][1] > singles[b][1])
+	for k in skeys.slice(0, 15):
+		print("PERF mesh %-34s count %4d  total tris %8d" % [k, singles[k][0], singles[k][1]])
 	var player := get_tree().get_first_node_in_group("player") as Player
 	player.frozen = true
 	player.set_process_unhandled_input(false)

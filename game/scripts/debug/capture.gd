@@ -43,6 +43,8 @@ const VIEWS := {
 	"32_post_160": [Vector3(-18.76, 0.0, 3.22), Vector3(-20.20, 0.25, 6.34)],
 	"33_spawn_post": [Vector3(-10.0, 0.0, 33.0), Vector3(-11.6, 0.3, 30.0)],
 	"34_lawn_top": [Vector3(7.0, 22.0, 17.0), Vector3(7.01, 0.0, 16.99)],
+	"35_seam_lawn": [Vector3(-3.5, 0.0, 31.0), Vector3(-5.0, 0.3, 12.0)],
+	"36_seam_top": [Vector3(-6.0, 30.0, 20.0), Vector3(-6.01, 0.0, 19.99)],
 	"28_bridge_side": [Vector3(-19.5, -0.5, 15.0), Vector3(-14.9, 0.3, 10.5)],
 	"29_bridge_side2": [Vector3(-11.0, -0.5, 6.0), Vector3(-14.9, 0.3, 10.5)],
 	"25_bridge_end": [Vector3(-10.9, 0.0, 14.3), Vector3(-13.4, 0.2, 11.9)],
@@ -65,6 +67,11 @@ func _run() -> void:
 			_apply_state(a.get_slice("=", 1))
 		elif a.begins_with("--only="):
 			only = a.get_slice("=", 1)
+		elif a.begins_with("--hide="):
+			for n in a.get_slice("=", 1).split(","):
+				var node := get_tree().current_scene.find_child(n, true, false) as Node3D
+				if node:
+					node.visible = false
 	var dir := ProjectSettings.globalize_path(out_dir)
 	DirAccess.make_dir_recursive_absolute(dir)
 	if "--ui" in args:

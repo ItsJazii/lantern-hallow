@@ -9,6 +9,12 @@ static var _scenes := {}
 static var _meshes := {}
 
 
+## True in the browser build (or natively with `-- --weblite`, to preview it):
+## weak laptop GPUs there get lighter trees and grass and shorter grass reach.
+static func web_lite() -> bool:
+	return OS.has_feature("web") or OS.get_cmdline_user_args().has("--weblite")
+
+
 static func has(model_name: String) -> bool:
 	return ResourceLoader.exists(DIR + model_name + ".glb")
 

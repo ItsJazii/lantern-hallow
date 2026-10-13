@@ -1,0 +1,53 @@
+		<meta name="description" content="A cozy first-person night-garden game. Gather moonleaves, brew tea, fish the pond and light the lanterns. Made with Godot and Tripo 3D models.">
+		<meta property="og:title" content="Lantern Hollow">
+		<meta property="og:description" content="A cozy first-person night-garden game. Play it in your browser.">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://lantern-hallow.vercel.app/">
+		<meta property="og:image" content="https://lantern-hallow.vercel.app/preview.png">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Lantern Hollow">
+		<meta name="twitter:description" content="A cozy first-person night-garden game. Play it in your browser.">
+		<meta name="twitter:image" content="https://lantern-hallow.vercel.app/preview.png">
+		<script>
+// The game data is hosted as numbered parts (each under the host's file-size limit).
+// Godot fetches "index.pck"; this joins the parts back into one stream on the fly.
+(function () {
+	const PARTS = __PARTS__;
+	const realFetch = window.fetch.bind(window);
+	window.fetch = function (input, init) {
+		const url = typeof input === 'string' ? input : (input && input.url) || '';
+		if (!/(^|\/)index\.pck(\?|$)/.test(url)) {
+			return realFetch(input, init);
+		}
+		return realFetch('index.pck.part0').then(function (first) {
+			if (!first.ok) {
+				return first;
+			}
+			let next = 1;
+			let reader = first.body.getReader();
+			const stream = new ReadableStream({
+				pull: function (controller) {
+					return reader.read().then(function (chunk) {
+						if (!chunk.done) {
+							controller.enqueue(chunk.value);
+							return;
+						}
+						if (next >= PARTS) {
+							controller.close();
+							return;
+						}
+						return realFetch('index.pck.part' + next++).then(function (res) {
+							if (!res.ok) {
+								throw new Error('Failed loading game data part ' + (next - 1));
+							}
+							reader = res.body.getReader();
+							return this.pull(controller);
+						}.bind(this));
+					}.bind(this));
+				},
+			});
+			return new Response(stream, { status: 200, headers: { 'Content-Type': 'application/octet-stream' } });
+		});
+	};
+})();
+		</script>
