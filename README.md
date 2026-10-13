@@ -4,6 +4,13 @@ A small, cozy first-person night-garden game made with **Godot 4.7.2**. Every ch
 
 ![Lantern Hollow](screenshots/01_arrival_bridge.png)
 
+## Just want to play?
+
+Grab a ready-made build from the [**Releases page**](https://github.com/ItsJazii/lantern-hallow/releases/latest):
+
+- **Windows:** download `LanternHollow-windows.exe` and run it. It's a single file; Windows SmartScreen may warn because it isn't signed (*More info → Run anyway*).
+- **Browser:** download `LanternHollow-web.zip`, unzip it, and serve the folder (see [Build it yourself](#build-it-yourself) for the one-line server command).
+
 ## Play it locally (fork → Godot)
 
 You only need **Godot 4.7.2** (the standard build, not the .NET/C# one). There's nothing else to install.
@@ -159,3 +166,7 @@ Tripo prompts for the models are listed in [NEW_MODELS.md](NEW_MODELS.md).
 - Sound effects: generated with ElevenLabs.
 - Code, shaders and procedural audio: written for this project.
 - Engine: [Godot Engine](https://godotengine.org) (MIT).
+
+## License
+
+[MIT](LICENSE): free to use, modify and share, including in your own projects; just keep the copyright notice.
